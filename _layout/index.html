@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= config.title || '首页'%></title>
+</head>
+<body>
+	<h1 class="post-title"><%='首页列表' %></h1>
+	<ul>
+		<%
+		for(var i in posts) {
+		%>
+			<li>
+				<span class="post-date"><%= posts[i].date%></span>
+				<a class="post-title" href="<%= posts[i].url %>"><%=posts[i].title %></a>
+			</li>
+		<%
+		} 
+		%>
+	</ul>
+</body>
+</html>
